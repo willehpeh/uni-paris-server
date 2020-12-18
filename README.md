@@ -1,3 +1,3 @@
 # Formation Angular janvier 2021 (serveur) #
 
-Clônez ce repo et faites `npm start`. Le serveur tournera sur `http://localhost:3000`.
+Clone this repo and run `npm start`. The server will run on `http://localhost:3000`.
