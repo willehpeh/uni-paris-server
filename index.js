@@ -3,13 +3,21 @@ module.exports = () => {
   const uuid = require('uuid');
   const faker = require('faker');
   const avatarGen = require('random-avatar-generator');
+  const jwt = require('jsonwebtoken');
 
   const generator = new avatarGen.AvatarGenerator();
+
+  const token = jwt.sign({ foo: 'bar' }, 'superSecretKey', { expiresIn: '24h' });
+
+  console.log(token);
 
   const data = {
     users: [],
     posts: [],
-    comments: []
+    comments: [],
+    auth: {
+      token
+    }
   };
 
   for (let i = 0; i < 5; i++) {

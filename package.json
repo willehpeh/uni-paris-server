@@ -12,6 +12,7 @@
   "dependencies": {
     "faker": "^5.1.0",
     "json-server": "^0.16.3",
+    "jsonwebtoken": "^8.5.1",
     "random-avatar-generator": "^2.0.0",
     "uuid": "^8.3.2"
   }
