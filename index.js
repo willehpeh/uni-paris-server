@@ -33,10 +33,12 @@ module.exports = () => {
   }
 
   for (let i = 0; i < 20; i++) {
+    const rawTitle = faker.lorem.words(Math.floor(Math.random() * 10 + 1));
+    const title = rawTitle.charAt(0).toUpperCase() + rawTitle.substr(1);
     const post = {
       id: uuid.v4(),
       userId: data.users[Math.floor(Math.random() * 5)].id,
-      title: faker.lorem.slug(Math.floor(Math.random() * 10 + 1)),
+      title,
       content: faker.lorem.paragraph(),
       comments: [],
       created: faker.date.between('2021-01-01', '2021-01-31')
